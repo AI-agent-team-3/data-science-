@@ -22,7 +22,6 @@ chat_history = {}
 # Замените 'bot_token' на токен вашего бота, сохранённого в секрет колаба
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 
-
 bot = telebot.TeleBot(BOT_TOKEN)
 
 def get_system_prompt(rag_context):
@@ -41,6 +40,7 @@ def get_system_prompt(rag_context):
 
 ИНФОРМАЦИЯ О ЦИТАДЕЛИ (используй ее для ответов):
 {rag_context}
+
 
 Отвечай ествесственно, как Морти, который старается быть хорошим гидом!"""
     return base_prompt.format(rag_context=rag_context)
@@ -102,5 +102,7 @@ def handle_llm_message(message):
         bot.reply_to(message, error_msg)
 
 bot.polling()
+
+
 
 
