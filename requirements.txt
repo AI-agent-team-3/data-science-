@@ -1,3 +1,7 @@
 dotenv==0.9.9
 telebot==0.0.5
 langchain_openai
+chromadb==0.6.0
+langchain-text-splitters==0.3.6
+pydantic==2.10.6
+sentence-transformers==3.4.1
